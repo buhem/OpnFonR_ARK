@@ -5,7 +5,7 @@ COPY [".", "./"]
 
 
 RUN pip install --upgrade pip && \
-    pip install -U sanic-cors sanic aiohttp aiofiles aiodns argparse configparser hmac urllib string re && \
+    pip install -U sanic-cors sanic aiohttp aiofiles aiodns argparse configparser string && \
     pip install -r /requirements.txt --user
 
 
