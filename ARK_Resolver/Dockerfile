@@ -1,7 +1,7 @@
-COPY [".", "./"]
-
-
 FROM dhlabbasel/ark-resolver
+
+
+COPY [".", "./"]
 
 
 ## install miniconda
