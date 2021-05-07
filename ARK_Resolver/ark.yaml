@@ -1,0 +1,3 @@
+steps:
+- name: "dhlabbasel"
+  args: ["ark-resolver", "--latest"]
