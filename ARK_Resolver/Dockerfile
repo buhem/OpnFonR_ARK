@@ -19,5 +19,7 @@ RUN pip install --upgrade pip && \
 #WORKDIR /app
 
 #ENTRYPOINT ["python", "./app/ark.py"]
-#CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 ark:main
-CMD uwsgi --http :$PORT --workers 1 --threads 8 --timeout 0 --wsgi-file ark.py --callable main
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 ark.py
+
+#error
+#CMD exec uwsgi --http :$PORT --workers 1 --threads 8 --timeout 0 --wsgi-file ark.py --callable main
