@@ -21,7 +21,7 @@ RUN pip install --upgrade pip && \
 
 #ENTRYPOINT ["python", "./app/ark.py"]
 
-ENTRYPOINT ["python3", "./app/ark.py"]
+ENTRYPOINT ["python3", "ark.py"]
 
 
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 'ark:main()'
