@@ -2,8 +2,8 @@ FROM dhlabbasel/ark-resolver
 
 ENV PYTHONUNBUFFERED True
 
-ENV APP_HOME /app
-WORKDIR $APP_HOME
+#ENV APP_HOME /app
+#WORKDIR $APP_HOME
 
 COPY [".", "./"]
 
