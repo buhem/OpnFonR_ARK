@@ -21,6 +21,8 @@ RUN pip install --upgrade pip && \
 
 #ENTRYPOINT ["python", "./app/ark.py"]
 
+EXPOSE 8080
+
 ENTRYPOINT ["python3", "ark.py"]
 
 
