@@ -1,4 +1,5 @@
-FROM dhlabbasel/ark-resolver
+#FROM dhlabbasel/ark-resolver
+FROM python:3.9-slim
 
 ENV PYTHONUNBUFFERED True
 
@@ -17,5 +18,5 @@ RUN pip install --upgrade pip && \
 
 #WORKDIR /app
 
-ENTRYPOINT ["python", "./app/ark.py"]
-#CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
+#ENTRYPOINT ["python", "./app/ark.py"]
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
