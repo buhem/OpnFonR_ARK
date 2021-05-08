@@ -17,5 +17,5 @@ RUN pip install --upgrade pip && \
 
 #WORKDIR /app
 
-#ENTRYPOINT ["python", "./ark.py"]
+ENTRYPOINT ["python", "./app/ark.py"]
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
