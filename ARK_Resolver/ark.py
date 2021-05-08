@@ -153,9 +153,9 @@ def load_settings(config_path):
 
     # Default configuration from environment variables.
     environment_vars = {
-        "ArkExternalHost": os.environ.get("ARK_EXTERNAL_HOST", "ark.example.org"),
+        "ArkExternalHost": os.environ.get("ARK_EXTERNAL_HOST", "arkopenfonr-g3q3eh375a-uc.a.run.app"),
         "ArkInternalHost": os.environ.get("ARK_INTERNAL_HOST", "0.0.0.0"),
-        "ArkInternalPort": os.environ.get("ARK_INTERNAL_PORT", "3336"),
+        "ArkInternalPort": os.environ.get("ARK_INTERNAL_PORT", "8080"),
         "ArkNaan": os.environ.get("ARK_NAAN", "00000"),
         "ArkHttpsProxy":  os.environ.get("ARK_HTTPS_PROXY", "true"),
         "ArkRegistry": os.environ.get("ARK_REGISTRY", "ark-registry.ini"),
