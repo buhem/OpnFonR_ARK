@@ -11,7 +11,7 @@ COPY [".", "./"]
 
 RUN pip install --upgrade pip && \
     pip install -U sanic-cors sanic argparse configparser Flask gunicorn && \
-    pip install -r /requirements.txt --user
+    pip install -r /app/requirements.txt --user
 
 #aiohttp aiofiles aiodns
 #COPY [".", "./app"]
