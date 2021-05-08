@@ -25,7 +25,7 @@
 #################################################################################################
 
 
-import argparse
+import configargparse
 import configparser
 import traceback
 import os
@@ -349,7 +349,7 @@ def test(settings):
 def main():
     # Parse command-line arguments.
     default_config_path = "ark-config.ini"
-    parser = argparse.ArgumentParser(description="Convert between Knora resource IRIs and ARK URLs.")
+    parser = configargparse.ArgumentParser(description="Convert between Knora resource IRIs and ARK URLs.")
     parser.add_argument("-c", "--config", help="config file (default {})".format(default_config_path))
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-s", "--server", help="start server", action="store_true")
