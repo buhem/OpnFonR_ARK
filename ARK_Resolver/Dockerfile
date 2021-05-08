@@ -8,9 +8,9 @@ WORKDIR $APP_HOME
 
 COPY [".", "./"]
 
-
+#change argparse by configargparse
 RUN pip install --upgrade pip && \
-    pip install -U sanic-cors sanic argparse configparser Flask gunicorn requests && \
+    pip install -U sanic-cors sanic configargparse configparser Flask gunicorn requests && \
     pip install -r requirements.txt --user
 
 #aiohttp aiofiles aiodns
