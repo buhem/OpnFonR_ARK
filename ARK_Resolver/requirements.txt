@@ -4,4 +4,4 @@ Sanic-Cors==0.10.0.post3
 Sanic-Plugins-Framework==0.9.5
 Flask==0.10.1
 gunicorn==19.3.0
-websockets==6.0
+websockets==8.1
