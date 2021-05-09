@@ -350,10 +350,10 @@ def main():
     print('start')
     # Parse command-line arguments.
     default_config_path = "ark-config.ini"
-#    parser = configargparse.ArgumentParser(description="Convert between Knora resource IRIs and ARK URLs.")
+    parser = configargparse.ArgumentParser(description="Convert between Knora resource IRIs and ARK URLs.")
 #    parser.add_argument("-c", "--config", help="config file (default {})".format(default_config_path))
-#    group = parser.add_mutually_exclusive_group()
-#    group.add_argument("-s", "--server", help="start server", action="store_true")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-s", "--server", help="start server", action="store_true")
 #    group.add_argument("-a", "--ark", help="ARK URL")
 #    group.add_argument("-i", "--iri", help="resource IRI")
 #    group.add_argument("-n", "--number", help="resource number for PHP server")
@@ -361,8 +361,8 @@ def main():
 #    parser.add_argument("-v", "--value", help="value UUID (with -i)")
 #    parser.add_argument("-d", "--date", help="Knora ARK timestamp (with -i or -n)")
 #    parser.add_argument("-p", "--project", help="project ID (with -n)")
-#    args = parser.parse_args()
-#    print(args)
+    args = parser.parse_args()
+    print(args)
 
     # Read the config and registry files.
 
