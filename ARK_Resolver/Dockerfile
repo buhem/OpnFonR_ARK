@@ -33,7 +33,7 @@ RUN pip install --upgrade pip && \
 
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 --worker-class sanic.worker.GunicornWorker
 
-ENTRYPOINT ["python3", "ark.py", "--server"]
+ENTRYPOINT ["python3", "ark.py", "--server", "True"]
 
 #error
 #CMD exec uwsgi --http :$PORT --workers 1 --threads 8 --timeout 0 --wsgi-file ark.py --callable main
