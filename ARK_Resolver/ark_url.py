@@ -153,8 +153,10 @@ class ArkUrlInfo:
             project_config = self.settings.config[self.project_id]
 
             if project_config.getboolean("UsePhp"):
+                print(self.to_php_redirect_url(project_config))
                 return self.to_php_redirect_url(project_config)
             else:
+                print(self.to_knora_redirect_url(project_config))
                 return self.to_knora_redirect_url(project_config)
 
     def to_knora_redirect_url(self, project_config):
