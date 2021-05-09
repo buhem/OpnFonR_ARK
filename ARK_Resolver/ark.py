@@ -347,6 +347,7 @@ def test(settings):
 # Command-line invocation.
 
 def main():
+    print('start')
     # Parse command-line arguments.
     default_config_path = "ark-config.ini"
     parser = configargparse.ArgumentParser(description="Convert between Knora resource IRIs and ARK URLs.")
@@ -361,6 +362,7 @@ def main():
 #    parser.add_argument("-d", "--date", help="Knora ARK timestamp (with -i or -n)")
 #    parser.add_argument("-p", "--project", help="project ID (with -n)")
     args = parser.parse_args()
+    print(args)
 
     # Read the config and registry files.
 
