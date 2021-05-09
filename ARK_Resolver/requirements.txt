@@ -1,5 +1,5 @@
 requests==2.25.1
-sanic==20.12.2
+sanic==20.12
 Sanic-Cors==0.10.0.post3
 Sanic-Plugins-Framework==0.9.5
 Flask==0.10.1
