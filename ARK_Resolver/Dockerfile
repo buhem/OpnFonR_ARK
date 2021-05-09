@@ -13,7 +13,7 @@ COPY [".", "./"]
 
 #change argparse by configargparse
 RUN pip install --upgrade pip && \
-    pip install -U sanic-cors configargparse configparser gunicorn requests websockets && \
+    pip install -U sanic-cors configargparse configparser gunicorn requests websockets==8.1 && \
     pip install -r requirements.txt --user
     
 
