@@ -361,7 +361,7 @@ def main():
 #    parser.add_argument("-v", "--value", help="value UUID (with -i)")
 #    parser.add_argument("-d", "--date", help="Knora ARK timestamp (with -i or -n)")
 #    parser.add_argument("-p", "--project", help="project ID (with -n)")
-    args = parser.parse_args()
+    args = parser.parse_args(['-s'])
     print(args)
 
     # Read the config and registry files.
