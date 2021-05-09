@@ -31,7 +31,9 @@ RUN pip install --upgrade pip && \
 
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 'ark:main()'
 
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 'ark:main()' --worker-class sanic.worker.GunicornWorker
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 --worker-class sanic.worker.GunicornWorker
+
+ENTRYPOINT ["python3", "ark.py", "--server"]
 
 #error
 #CMD exec uwsgi --http :$PORT --workers 1 --threads 8 --timeout 0 --wsgi-file ark.py --callable main
