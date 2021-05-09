@@ -1,6 +1,6 @@
 #FROM dhlabbasel/ark-resolver
 #FROM python:3.9-slim
-FROM sanicframework/sanic:LTS
+FROM sanicframework/sanic:20.12.2
 
 ENV PYTHONUNBUFFERED True
 
@@ -9,12 +9,12 @@ WORKDIR $APP_HOME
 
 COPY [".", "./"]
 
-#sanic requests gunicorn Flask
+#sanic Flask
 
 #change argparse by configargparse
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt --user && \
-    pip install -U sanic-cors configargparse configparser   
+    pip install -U sanic-cors configargparse configparser gunicorn requests
     
 
 #aiohttp aiofiles aiodns
