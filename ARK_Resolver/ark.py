@@ -304,7 +304,8 @@ def test(settings):
     print("parse a version 1 ARK URL for a PHP resource without a timestamp: ", end='')
     ark_url_info = ArkUrlInfo(settings, "https://ark.example.org/ark:/00000/1/0803/751e0b8am")
     redirect_url = ark_url_info.to_redirect_url()
-    assert redirect_url == "http://data.dasch.swiss/resources/1"
+    assert redirect_url == "https://sudoranais.shinyapps.io/Analysis_Processing_Rhotic_Alveolar/?speaker=informant_1&callType=abrid.wav"
+#    assert redirect_url == "http://data.dasch.swiss/resources/1"
     print("OK")
 
     print("parse an ARK URL for a PHP resource with a timestamp: ", end='')
@@ -372,13 +373,13 @@ def main():
     config_path = default_config_path
 
     try:
-        print(config_path)
         settings = load_settings(config_path)
-        print(settings)
 
         if args.server:
+            print('server')
             server(settings)
         elif args.test:
+            print('test')
             try:
                 test(settings)
             except Exception:
