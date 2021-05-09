@@ -127,6 +127,7 @@ async def reload(req):
 async def catch_all(_, path=""):
     try:
         redirect_url = ArkUrlInfo(settings=app.config.settings, ark_url=path, path_only=True).to_redirect_url()
+        print(redirect_url)
     except ArkUrlException as ex:
         return response.text(body=ex.message, status=400)
 
