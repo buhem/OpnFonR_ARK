@@ -370,7 +370,9 @@ def main():
         config_path = default_config_path
 
     try:
+        print(config_path)
         settings = load_settings(config_path)
+        print(settings)
 
         if args.server:
             server(settings)
