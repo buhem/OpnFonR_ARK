@@ -24,7 +24,7 @@
 
 
 # The base64url alphabet (without padding) from RFC 4648, Table 2.
-base64url_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
+base64url_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_."
 base64url_alphabet_length = len(base64url_alphabet)
 
 
