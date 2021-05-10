@@ -232,8 +232,8 @@ def unescape_and_validate_uuid(ark_url, escaped_uuid):
  #   if not base64url_check_digit.is_valid(unescaped_uuid):
  #       print('problem chek digit')
  #       raise ArkUrlException("Invalid ARK ID: {}".format(ark_url))
-
-    return unescaped_uuid[0:-1]
+    #unescaped_uuid[0:-0]
+    return unescaped_uuid
 
 
 # Formats ARK URLs.
