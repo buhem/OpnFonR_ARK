@@ -175,8 +175,11 @@ def load_settings(config_path):
         config.read_string(registry_str, source=registry_path)
     else:
         config.read_file(open(registry_path))
-
+    
+    print(config)
     settings = ArkUrlSettings(config)
+    print(settings.config)
+    print(settings.ark_path_pattern)
     return settings
 
 
