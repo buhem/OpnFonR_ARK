@@ -34,7 +34,7 @@ class ArkUrlSettings:
         self.top_config = config["DEFAULT"]
         self.knora_ark_version = 1
         self.project_id_pattern = "([0-9A-F]+)"
-        self.uuid_pattern = "([A-Za-z0-9_=]+)"
+        self.uuid_pattern = "([A-Za-z0-9_=.]+)"
         self.project_id_regex = re.compile("^" + self.project_id_pattern + "$")
         self.resource_iri_regex = re.compile("^http://rdfh.ch/" + self.project_id_pattern + "/([A-Za-z0-9_-]+)$")
         self.resource_int_id_factor = 982451653
@@ -229,9 +229,9 @@ def unescape_and_validate_uuid(ark_url, escaped_uuid):
     # '-' is escaped as '=' in the UUID and check digit, because '-' can be ignored in ARK URLs.
     unescaped_uuid = escaped_uuid.replace('=', '-')
 
-    if not base64url_check_digit.is_valid(unescaped_uuid):
-        print('problem chek digit')
-        raise ArkUrlException("Invalid ARK ID: {}".format(ark_url))
+ #   if not base64url_check_digit.is_valid(unescaped_uuid):
+ #       print('problem chek digit')
+ #       raise ArkUrlException("Invalid ARK ID: {}".format(ark_url))
 
     return unescaped_uuid[0:-1]
 
