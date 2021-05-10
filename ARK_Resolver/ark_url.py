@@ -88,8 +88,9 @@ class ArkUrlInfo:
 
                 if match is not None:
                     self.url_version = 0
-
+        print(match)
         if match is None:
+            print('no_match')
             raise ArkUrlException("Invalid ARK ID: {}".format(ark_url))
 
         # Which version of ARK ID did we match?
