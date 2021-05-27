@@ -1,6 +1,6 @@
 # OpnFonR_ARK
 
-OpnFonR_ARK is a URN resolver dedicated to Archival Resource Key (ARK) identifier. From an PID, OpnFonR_ARK will redirect the user to the digital location, a URL, of a particular digital object (image, sound, text, etc).
+OpnFonR_ARK is a URN resolver dedicated to Archival Resource Key (ARK) identifier. From a PID, OpnFonR_ARK will redirect the user to the digital location, a URL, of a particular digital object (image, sound, text, etc).
 
 The current version is mainly developed for the OpnFonR digital repository ([Click here](https://sudoranais.shinyapps.io/Analysis_Processing_Rhotic_Alveolar/)), but it can be applied to any repository. In the coming versions of OpnFonR_ARK, I intend to extend it to other URNs, notably ISSN and DOI. 
 
